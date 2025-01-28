@@ -14,6 +14,7 @@ public class SwordMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //finds mouse position in the screen 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
@@ -22,6 +23,7 @@ public class SwordMover : MonoBehaviour
         {
             transform.position = mousePos/2;
         }
+
 
 
     }
