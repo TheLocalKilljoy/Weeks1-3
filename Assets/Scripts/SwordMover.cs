@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordMover : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,15 @@ public class SwordMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //finds mouse position in the screen 
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
+        //moves the sword with the mouse as long as the left button is down and it isn't too low
+        if (Input.GetMouseButton(0) && mousePos.y > -3)
+        {
+            transform.position = mousePos/2;
+        }
+
+
     }
 }
